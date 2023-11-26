@@ -1,0 +1,69 @@
+
+
+# PIER
+
+Implementation for Potentially Idiomatic Expression Representation (PIER) model
+
+
+## Description
+
+This repo contains the implementation for the Potentially Idiomatic Expression Representation (PIER) model from the paper: Unified Representation for Non-compositional and Compositional Expressions.
+
+The paper is published in EMNLP2023 Findings. Please refer to the paper for more details.
+
+## Getting Started
+
+### Dependencies
+
+We recommend running the model training and evaluation in a Python virtual environment.
+The dependencies and required packages are listed in `requirements.txt`.
+
+Note that though our work utilized [AdapterHub](https://github.com/adapter-hub)'s adapter implementation.   We maintain a local copy of the AdapterHub source code in which we additionally implemented the `Fusion` module.  Hence, AdapterHub is not part of the requirements.
+
+### Data
+To run the model training and evaluation, supporting data (e.g., feature maps, training data, etc.) must be downloaded and place to the proper locations.
+
+Please download data and put them into the following two directories:
+* `./data`: Download and extract data from [here](https://drive.google.com/file/d/1tUwo5aL4o3ioJzppwcpMphYAzOnBnwfm/view?usp=sharing).
+* `./fusion_analysis`: Download and extract data from [here](https://drive.google.com/file/d/1PCkCHi6lBIid6rW5bLnRijZyp2yixPac/view?usp=sharing).
+
+### Model Checkpoints
+PIER model utilizes pretrained [GIEA](https://arxiv.org/abs/2207.03679) model checkpoint as part of its architecture. So, before training the PIER model, you need to download the GIEA's checkpoints.
+* GIEA model checkpoints: download [link](https://drive.google.com/file/d/1ZkKzQCnFCsdAN438l4worfK4kuSAJeoK/view?usp=sharing)
+* Extract the checkpoint and place it under the direction: `./checkpoints/bart-adapters_non-compositional_magpie_random-GIEA`
+
+We also provide our the checkpoints of best-performing model from the paper, PIER+. Download the trained checkpoint and you can perform IE embedding and PIER+ intrinsic evaluation directly without having to train the model yourself.
+* PIER model checkpoints: download [link](https://drive.google.com/file/d/14NzSUxRy2x3Vz0fnzLUpSSGNrPzrK57d/view?usp=sharing)
+* Extract the checkpoint and place it under the direction: `./checkpoints/bart-adapters_fusion_magpie_random-PIER`
+
+## Key Model Components
+
+### PIER model
+The
+
+
+## Model Training
+
+## Model Evaluation
+```
+code blocks for commands
+```
+
+
+## Authors
+
+Contributors names and contact info
+
+Ziheng Zeng (zzeng13@illinois.edu)
+
+## Version History
+
+* 0.2
+    * Added evaluation example for intrinsic evaluations.
+    * Added online storage location for data and checkpoints.
+* 0.1
+  * Initial Release
+
+## License
+
+This project is licensed under the MIT License.
