@@ -3,6 +3,5 @@
 
 *.json
 *.jsonl
-*.txt
 *.bin
 __pycache__/
